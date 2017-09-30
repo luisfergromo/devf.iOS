@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE742B2E1F7F515B00FB350E /* NSString+DevF.m in Sources */ = {isa = PBXBuildFile; fileRef = DE742B2D1F7F515B00FB350E /* NSString+DevF.m */; };
 		DEBCB7D81F74E14A0092F3E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBCB7D71F74E14A0092F3E4 /* AppDelegate.m */; };
 		DEBCB7DB1F74E14A0092F3E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBCB7DA1F74E14A0092F3E4 /* ViewController.m */; };
 		DEBCB7DE1F74E14A0092F3E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBCB7DC1F74E14A0092F3E4 /* Main.storyboard */; };
 		DEBCB7E01F74E14A0092F3E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBCB7DF1F74E14A0092F3E4 /* Assets.xcassets */; };
 		DEBCB7E31F74E14A0092F3E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBCB7E11F74E14A0092F3E4 /* LaunchScreen.storyboard */; };
 		DEBCB7E61F74E14A0092F3E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBCB7E51F74E14A0092F3E4 /* main.m */; };
+		DED7C7481F7EBDC10084BB26 /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7C7471F7EBDC10084BB26 /* XYPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE742B2C1F7F515B00FB350E /* NSString+DevF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DevF.h"; sourceTree = "<group>"; };
+		DE742B2D1F7F515B00FB350E /* NSString+DevF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DevF.m"; sourceTree = "<group>"; };
 		DEBCB7D31F74E14A0092F3E4 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBCB7D61F74E14A0092F3E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEBCB7D71F74E14A0092F3E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		DEBCB7E21F74E14A0092F3E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEBCB7E41F74E14A0092F3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEBCB7E51F74E14A0092F3E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DED7C7461F7EBDC10084BB26 /* XYPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPoint.h; sourceTree = "<group>"; };
+		DED7C7471F7EBDC10084BB26 /* XYPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE742B2B1F7F4D4C00FB350E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DE742B2C1F7F515B00FB350E /* NSString+DevF.h */,
+				DE742B2D1F7F515B00FB350E /* NSString+DevF.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		DEBCB7CA1F74E1490092F3E4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +73,7 @@
 		DEBCB7D51F74E14A0092F3E4 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				DE742B2B1F7F4D4C00FB350E /* Categories */,
 				DEBCB7D61F74E14A0092F3E4 /* AppDelegate.h */,
 				DEBCB7D71F74E14A0092F3E4 /* AppDelegate.m */,
 				DEBCB7D91F74E14A0092F3E4 /* ViewController.h */,
@@ -67,6 +83,8 @@
 				DEBCB7E11F74E14A0092F3E4 /* LaunchScreen.storyboard */,
 				DEBCB7E41F74E14A0092F3E4 /* Info.plist */,
 				DEBCB7E51F74E14A0092F3E4 /* main.m */,
+				DED7C7461F7EBDC10084BB26 /* XYPoint.h */,
+				DED7C7471F7EBDC10084BB26 /* XYPoint.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -145,6 +163,8 @@
 				DEBCB7DB1F74E14A0092F3E4 /* ViewController.m in Sources */,
 				DEBCB7E61F74E14A0092F3E4 /* main.m in Sources */,
 				DEBCB7D81F74E14A0092F3E4 /* AppDelegate.m in Sources */,
+				DED7C7481F7EBDC10084BB26 /* XYPoint.m in Sources */,
+				DE742B2E1F7F515B00FB350E /* NSString+DevF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
