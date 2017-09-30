@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		DE742B2C1F7F515B00FB350E /* NSString+DevF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DevF.h"; sourceTree = "<group>"; };
 		DE742B2D1F7F515B00FB350E /* NSString+DevF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DevF.m"; sourceTree = "<group>"; };
+		DE742B301F7F583600FB350E /* MathProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathProtocol.h; sourceTree = "<group>"; };
 		DEBCB7D31F74E14A0092F3E4 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBCB7D61F74E14A0092F3E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEBCB7D71F74E14A0092F3E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +55,14 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		DE742B2F1F7F57F200FB350E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DE742B301F7F583600FB350E /* MathProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DEBCB7CA1F74E1490092F3E4 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +82,7 @@
 		DEBCB7D51F74E14A0092F3E4 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				DE742B2F1F7F57F200FB350E /* Protocols */,
 				DE742B2B1F7F4D4C00FB350E /* Categories */,
 				DEBCB7D61F74E14A0092F3E4 /* AppDelegate.h */,
 				DEBCB7D71F74E14A0092F3E4 /* AppDelegate.m */,

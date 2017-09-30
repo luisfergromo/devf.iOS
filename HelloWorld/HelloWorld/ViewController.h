@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MathProtocol.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<AdditionDelegate>
 
 
 @end

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "XYPoint.h"
-#import "XYZPerson.h"
 #import "NSString+DevF.h"
 
 @interface ViewController ()
@@ -26,17 +25,30 @@
     self.xypoint = [[XYPoint alloc] initWithX:12.4 initWithY:4.5];
         //Imprimir los valores de getX y getY
     NSLog(@"%@",[[NSString alloc]initWithFormat:@"X: %.2f ,Y: %.2f",self.xypoint.getX, self.xypoint.getY]);
-
-    [NSString stringWithFormat:@"%c", self.nameTextfield.text.getFirstRepeatedChar ];
-
-    //
+//
+    NSLog(@"%@",[NSString stringWithFormat:@"Int addition result: %d", [self addInt:12 withInt:23]] );
+//
+    NSLog(@"%@",[NSString stringWithFormat:@"Float addition result: %.1f", [self addFloat:1.4 withFloat:5.6]]);
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+-(IBAction)onGretingsTapped:(id)sender{
+    self.greetingsLabel.text = self.nameTextfield.text;
+//** imprimir el valor que no es repetido **
+//    [NSString stringWithFormat:@"%c", self.nameTextfield.text.getFirstRepeatedChar ];
+self.nameTextfield.text = self.nameTextfield.text.reverseString;
+}
+-(int) addInt:(int)num1 withInt:(int)num2{
+    return  num1 + num2;
+}
+-(float) addFloat:(float)num1 withFloat:(float)num2{
+    return num1 + num2;
+}
+/*
+ - (void)didReceiveMemoryWarning {
+   [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+*/
 
 
 @end
