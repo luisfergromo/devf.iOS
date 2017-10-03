@@ -31,24 +31,34 @@
     NSLog(@"%@",[NSString stringWithFormat:@"Float addition result: %.1f", [self addFloat:1.4 withFloat:5.6]]);
 }
 
--(IBAction)onGretingsTapped:(id)sender{
-    self.greetingsLabel.text = self.nameTextfield.text;
-//** imprimir el valor que no es repetido **
-//    [NSString stringWithFormat:@"%c", self.nameTextfield.text.getFirstRepeatedChar ];
-self.nameTextfield.text = self.nameTextfield.text.reverseString;
-}
+//-(IBAction)onGretingsTapped:(id)sender{
+//    self.greetingsLabel.text = self.nameTextfield.text;
+////** imprimir el valor que no es repetido **
+////    [NSString stringWithFormat:@"%c", self.nameTextfield.text.getFirstRepeatedChar ];
+//self.nameTextfield.text = self.nameTextfield.text.reverseString;
+//}
 -(int) addInt:(int)num1 withInt:(int)num2{
     return  num1 + num2;
 }
 -(float) addFloat:(float)num1 withFloat:(float)num2{
     return num1 + num2;
 }
-/*
+-(void) createGreetingsWithName:(NSString*) name stringPrefix:(NSString*) prefix{
+    NSString* (^stringWithFormat)(NSString*,NSString*)=^NSString* (NSString* prefix ,NSString* name){
+        NSLog(@"%@",[NSString stringWithFormat:@"%@",[self  name:@"José" stringPrefix:@"Hola, "]]);
+//        stringWithFormat(prefix,name);
+            //        NSLog(@"%@",[[NSString] name:@"%@"]);
+
+    };
+//    (NSString*)(@"%@",[NSString stringWithFormat:@"%@",[self createGreetingsWithName:@"Adrian" stringPrefix:@"Hola, "]]);
+//bloque:(NSString*(^)(NSString));
+}/*
  - (void)didReceiveMemoryWarning {
    [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 */
+
 
 
 @end
