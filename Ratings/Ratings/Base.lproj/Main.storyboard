@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Bbq-s3-4if"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gestures" id="g92-KV-nTL"/>
+                    <tabBarItem key="tabBarItem" title="Gestures" image="Gestures.png" id="g92-KV-nTL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtR-Jv-No2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +154,7 @@
         <!--Players-->
         <scene sceneID="cXb-LM-o9u">
             <objects>
-                <tableViewController id="TgZ-op-Pqp" sceneMemberID="viewController">
+                <tableViewController id="TgZ-op-Pqp" customClass="PlayersViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HJf-8N-7RS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
         <scene sceneID="LuI-Fw-K3B">
             <objects>
                 <navigationController id="9gI-OO-LK5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Players" id="lG2-R7-FIW"/>
+                    <tabBarItem key="tabBarItem" title="Players" image="Players.png" id="lG2-R7-FIW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rzj-7f-u3d">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,4 +214,8 @@
             <point key="canvasLocation" x="958" y="842"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gestures.png" width="30" height="30"/>
+        <image name="Players.png" width="30" height="30"/>
+    </resources>
 </document>
