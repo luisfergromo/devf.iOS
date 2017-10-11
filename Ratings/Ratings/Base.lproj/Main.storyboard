@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,10 +29,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="KBo-RB-46O"/>
-                    <connections>
-                        <segue destination="aa4-07-hYx" kind="modal" id="VCQ-te-vPG"/>
-                        <segue destination="t02-9c-IdG" kind="show" id="Aek-72-4UZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,9 +75,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lfu-Wu-xWc"/>
                     </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="push" id="ikS-tJ-EmE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6D-nk-uVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,23 +153,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerCell" id="DCB-Po-VG3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="77" id="DCB-Po-VG3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DCB-Po-VG3" id="V3k-og-5fs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zne-Tk-DyX">
-                                            <rect key="frame" x="259" y="0.0" width="108" height="44"/>
+                                        <imageView userInteractionEnabled="NO" tag="102" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-uC-3k7">
+                                            <rect key="frame" x="239" y="19" width="128" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Zne-Tk-DyX" firstAttribute="trailing" secondItem="V3k-og-5fs" secondAttribute="trailingMargin" id="Hec-BF-UUp"/>
-                                        <constraint firstItem="Zne-Tk-DyX" firstAttribute="centerX" secondItem="V3k-og-5fs" secondAttribute="centerX" constant="125.5" id="NJM-dd-XR0"/>
-                                        <constraint firstItem="Zne-Tk-DyX" firstAttribute="top" secondItem="V3k-og-5fs" secondAttribute="top" id="SsS-NP-CG2"/>
-                                        <constraint firstItem="Zne-Tk-DyX" firstAttribute="centerY" secondItem="V3k-og-5fs" secondAttribute="centerY" id="VIY-2d-na2"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

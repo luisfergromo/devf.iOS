@@ -51,11 +51,24 @@
 //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
 //                                      reuseIdentifier:CellIdentifier];
 //    }
+
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
+//
+//    Player *player = self.players[indexPath.row];
+//    cell.textLabel.text = player.name;
+//    cell.detailTextLabel.text = player.game;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
 
-    Player *player = self.players[indexPath.row];
-    cell.textLabel.text = player.name;
-    cell.detailTextLabel.text = player.game;
+    Player *player = (self.players)[indexPath.row];
+
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+    nameLabel.text = player.name;
+
+    UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
+    gameLabel.text = player.game;
+
+    UIImageView *ratingImageView = (UIImageView *)[cell viewWithTag:102];
+    ratingImageView.image = [self imageForRating:player.rating];
 
     return cell;
 }
@@ -103,5 +116,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Table Customisation
+- (UIImage *)imageForRating:(int)rating
+{
+    switch (rating) {
+        case 1: return [UIImage imageNamed:@"1StarSmall"];
+        case 2: return [UIImage imageNamed:@"2StarsSmall"];
+        case 3: return [UIImage imageNamed:@"3StarsSmall"];
+        case 4: return [UIImage imageNamed:@"4StarsSmall"];
+        case 5: return [UIImage imageNamed:@"5StarsSmall"];
+    }
+    return nil;
+}
+
 
 @end
