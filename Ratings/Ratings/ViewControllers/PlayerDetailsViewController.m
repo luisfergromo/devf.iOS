@@ -1,18 +1,19 @@
 //
-//  PlayersViewController.m
+//  PlayerDetailsViewController.m
 //  Ratings
 //
-//  Created by Luis Romo on 09/10/17.
+//  Created by Luis Romo on 11/10/17.
 //  Copyright © 2017 DevF. All rights reserved.
 //
 
-#import "PlayersViewController.h"
-#import "Player.h"
-@interface PlayersViewController ()
+#import "PlayerDetailsViewController.h"
+
+@interface PlayerDetailsViewController ()
 
 @end
 
-@implementation PlayersViewController
+@implementation PlayerDetailsViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +23,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,49 +34,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    return self.players.count;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    //static NSString *CellIdentifier = @"Cell";
-
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-//                                      reuseIdentifier:CellIdentifier];
-//    }
-
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
-//
-//    Player *player = self.players[indexPath.row];
-//    cell.textLabel.text = player.name;
-//    cell.detailTextLabel.text = player.game;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
-
-    Player *player = (self.players)[indexPath.row];
-
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-    nameLabel.text = player.name;
-
-    UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
-    gameLabel.text = player.game;
-
-    UIImageView *ratingImageView = (UIImageView *)[cell viewWithTag:102];
-    ratingImageView.image = [self imageForRating:player.rating];
-
-    return cell;
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
 /*
- //Override to support conditional editing of the table view.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
+
+/*
+// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
@@ -116,25 +96,15 @@
     // Pass the selected object to the new view controller.
 }
 */
-#pragma mark - Table Customisation
-- (UIImage *)imageForRating:(int)rating
-{
-    switch (rating) {
-        case 1: return [UIImage imageNamed:@"1StarSmall"];
-        case 2: return [UIImage imageNamed:@"2StarsSmall"];
-        case 3: return [UIImage imageNamed:@"3StarsSmall"];
-        case 4: return [UIImage imageNamed:@"4StarsSmall"];
-        case 5: return [UIImage imageNamed:@"5StarsSmall"];
-    }
-    return nil;
-}
-#pragma mark - PlayerDetailViewControllerDelegate
--(void) playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *)controller{
+#pragma mark - Navigation items events
 
+- (IBAction)onCancelTapped:(id)sender {
+    if(self.delegate &&[self.delegate respondsToSelector:@selector(playerDetailsViewControllerDidSave:)])
+        [self.delegate playerDetailsViewControllerDidCancel:self];
 }
--(void) playerDetailsViewControllerDidSave:(PlayerDetailsViewController *)controller{
-
+- (IBAction)onDoneTapped:(id)sender {
+    if(self.delegate &&[self.delegate respondsToSelector:@selector(playerDetailsViewControllerDidCancel:)])
+        [self.delegate playerDetailsViewControllerDidSave:self];
 }
-
 
 @end

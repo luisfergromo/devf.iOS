@@ -16,6 +16,7 @@
 		DE4629851F8C60D600EE8A35 /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4629841F8C60D600EE8A35 /* PlayersViewController.m */; };
 		DE46298B1F8C6AEF00EE8A35 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = DE46298A1F8C6AEF00EE8A35 /* Player.m */; };
 		DEA0C0BF1F8EF15700CAFBEF /* PlayeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA0C0BE1F8EF15700CAFBEF /* PlayeTableViewCell.m */; };
+		DEA0C0C21F8F005200CAFBEF /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA0C0C11F8F005200CAFBEF /* PlayerDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		DEA0C0A81F8DA5D000CAFBEF /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gestures.png; sourceTree = "<group>"; };
 		DEA0C0BD1F8EF15700CAFBEF /* PlayeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayeTableViewCell.h; sourceTree = "<group>"; };
 		DEA0C0BE1F8EF15700CAFBEF /* PlayeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayeTableViewCell.m; sourceTree = "<group>"; };
+		DEA0C0C01F8F005200CAFBEF /* PlayerDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerDetailsViewController.h; sourceTree = "<group>"; };
+		DEA0C0C11F8F005200CAFBEF /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 			children = (
 				DE4629831F8C60D600EE8A35 /* PlayersViewController.h */,
 				DE4629841F8C60D600EE8A35 /* PlayersViewController.m */,
+				DEA0C0C01F8F005200CAFBEF /* PlayerDetailsViewController.h */,
+				DEA0C0C11F8F005200CAFBEF /* PlayerDetailsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				DE46296F1F8C511A00EE8A35 /* AppDelegate.m in Sources */,
 				DE46298B1F8C6AEF00EE8A35 /* Player.m in Sources */,
 				DEA0C0BF1F8EF15700CAFBEF /* PlayeTableViewCell.m in Sources */,
+				DEA0C0C21F8F005200CAFBEF /* PlayerDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
