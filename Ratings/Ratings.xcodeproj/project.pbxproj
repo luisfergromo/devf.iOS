@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		DE46296F1F8C511A00EE8A35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE46296E1F8C511A00EE8A35 /* AppDelegate.m */; };
 		DE4629721F8C511A00EE8A35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4629711F8C511A00EE8A35 /* ViewController.m */; };
-		DE4629751F8C511A00EE8A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4629731F8C511A00EE8A35 /* Main.storyboard */; };
+		DE4629751F8C511A00EE8A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4629731F8C511A00EE8A35 /* Main.storyboard */; settings = {ASSET_TAGS = (NewViewController, ); }; };
 		DE4629771F8C511A00EE8A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4629761F8C511A00EE8A35 /* Assets.xcassets */; };
 		DE46297A1F8C511A00EE8A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4629781F8C511A00EE8A35 /* LaunchScreen.storyboard */; };
 		DE46297D1F8C511A00EE8A35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE46297C1F8C511A00EE8A35 /* main.m */; };
 		DE4629851F8C60D600EE8A35 /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4629841F8C60D600EE8A35 /* PlayersViewController.m */; };
 		DE46298B1F8C6AEF00EE8A35 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = DE46298A1F8C6AEF00EE8A35 /* Player.m */; };
+		DEA0C0BF1F8EF15700CAFBEF /* PlayeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA0C0BE1F8EF15700CAFBEF /* PlayeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		DEA0C0A61F8DA5D000CAFBEF /* 3Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3Stars@2x.png"; sourceTree = "<group>"; };
 		DEA0C0A71F8DA5D000CAFBEF /* 1Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Star@2x.png"; sourceTree = "<group>"; };
 		DEA0C0A81F8DA5D000CAFBEF /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gestures.png; sourceTree = "<group>"; };
+		DEA0C0BD1F8EF15700CAFBEF /* PlayeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayeTableViewCell.h; sourceTree = "<group>"; };
+		DEA0C0BE1F8EF15700CAFBEF /* PlayeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 		DE46296C1F8C511A00EE8A35 /* Ratings */ = {
 			isa = PBXGroup;
 			children = (
+				DEA0C0BC1F8EF12B00CAFBEF /* Cells */,
 				DE4629871F8C63E100EE8A35 /* Models */,
 				DE4629861F8C615400EE8A35 /* ViewControllers */,
 				DE46296D1F8C511A00EE8A35 /* AppDelegate.h */,
@@ -153,6 +157,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		DEA0C0BC1F8EF12B00CAFBEF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DEA0C0BD1F8EF15700CAFBEF /* PlayeTableViewCell.h */,
+				DEA0C0BE1F8EF15700CAFBEF /* PlayeTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +192,9 @@
 		DE4629621F8C511A00EE8A35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					NewViewController,
+				);
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = DevF;
 				TargetAttributes = {
@@ -229,6 +245,7 @@
 				DE46297D1F8C511A00EE8A35 /* main.m in Sources */,
 				DE46296F1F8C511A00EE8A35 /* AppDelegate.m in Sources */,
 				DE46298B1F8C6AEF00EE8A35 /* Player.m in Sources */,
+				DEA0C0BF1F8EF15700CAFBEF /* PlayeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
