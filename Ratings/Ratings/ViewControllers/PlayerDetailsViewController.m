@@ -44,7 +44,7 @@ NSString *_game; //mejor hacer property's
 #pragma mark - Navigation
 
 //In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)zprepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"PickGame"]) {
         GamePickerViewController *gamePickerViewController = segue.destinationViewController;
         gamePickerViewController.delegate = self;
@@ -63,10 +63,17 @@ NSString *_game; //mejor hacer property's
 }
 - (IBAction)onDoneTapped:(id)sender {
     if(self.delegate &&[self.delegate respondsToSelector:@selector(playerDetailsViewController:didAddPlayer:)]){
+//        Player *player = [[Player alloc] init];
+//        player.name = self.nameTextField.text;
+//        player.game = @"Chess";
+//        player.rating = 1;
+//        [self.delegate playerDetailsViewController:self didAddPlayer:player];
+        
         Player *player = [[Player alloc] init];
         player.name = self.nameTextField.text;
-        player.game = @"Chess";
+        player.game = _game;  // only this line is changed
         player.rating = 1;
+        
         [self.delegate playerDetailsViewController:self didAddPlayer:player];
     }
 
