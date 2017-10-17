@@ -20,13 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _selectedIndex = [_games indexOfObject:self.game];
     _games = @[@"Angry Birds",
                @"Chess",
                @"Russian Roulette",
                @"Spin the Bottle",
                @"Texas Hold'em Poker",
                @"Tic-Tac-Toe"];
+    
+    _selectedIndex = [_games indexOfObject:self.game];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

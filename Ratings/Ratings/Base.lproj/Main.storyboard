@@ -145,6 +145,7 @@
                                     <outlet property="gameLabel" destination="shP-z6-wgI" id="HnD-KW-ZIl"/>
                                     <outlet property="nameLabel" destination="eDA-VQ-KuY" id="TaI-iE-Y9J"/>
                                     <outlet property="ratingImageView" destination="Ko8-uC-3k7" id="6WY-2v-kdQ"/>
+                                    <segue destination="U0X-H3-MLv" kind="presentation" identifier="EditPlayer" id="GRG-4W-wAj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -176,7 +177,7 @@
                         <sections>
                             <tableViewSection headerTitle="Player name" id="cdS-s1-b48">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="aVf-5U-n7c">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditPlayerName" rowHeight="44" id="aVf-5U-n7c">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aVf-5U-n7c" id="2rF-8E-OJy">
@@ -184,17 +185,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert the name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hZA-X6-Gjp">
-                                                    <rect key="frame" x="8" y="5" width="359" height="34"/>
+                                                    <rect key="frame" x="13" y="5" width="349" height="34"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="hZA-X6-Gjp" secondAttribute="trailing" constant="8" id="0cb-bP-xhP"/>
                                                 <constraint firstItem="hZA-X6-Gjp" firstAttribute="centerX" secondItem="2rF-8E-OJy" secondAttribute="centerX" id="3cm-mG-MFK"/>
+                                                <constraint firstItem="hZA-X6-Gjp" firstAttribute="top" secondItem="2rF-8E-OJy" secondAttribute="top" constant="5" id="FzC-Ow-OLX"/>
+                                                <constraint firstAttribute="trailing" secondItem="hZA-X6-Gjp" secondAttribute="trailing" constant="13" id="JyV-xF-rQr"/>
                                                 <constraint firstItem="hZA-X6-Gjp" firstAttribute="centerY" secondItem="2rF-8E-OJy" secondAttribute="centerY" id="N3V-gS-K3m"/>
                                                 <constraint firstAttribute="bottom" secondItem="hZA-X6-Gjp" secondAttribute="bottom" constant="5" id="Og5-Ef-zu9"/>
+                                                <constraint firstItem="hZA-X6-Gjp" firstAttribute="leading" secondItem="2rF-8E-OJy" secondAttribute="leading" constant="13" id="PKg-kr-fGR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -340,6 +343,7 @@
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="GRG-4W-wAj"/>
         <segue reference="oNR-LA-HTu"/>
     </inferredMetricsTieBreakers>
 </document>

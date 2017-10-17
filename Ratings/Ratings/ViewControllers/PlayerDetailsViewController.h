@@ -12,15 +12,11 @@
 @class PlayerDetailsViewController;
 @class Player;
 
-
-
 @protocol PlayerDetailsViewControllerDelegate <NSObject>
 - (void)playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *)controller;
-//- (void)playerDetailsViewControllerDidSave:(PlayerDetailsViewController *)controller;
-//- (void)playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *)controller;
 - (void)playerDetailsViewController:(PlayerDetailsViewController *)controller didAddPlayer:(Player *)player;
+-(void)playerDetailsViewController:(PlayerDetailsViewController *)controller didEditPlayer:(Player *)player;
 @end
-
 
 @interface PlayerDetailsViewController : UITableViewController <GamePickerViewControllerDelegate>
 
@@ -28,8 +24,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *detailViewCell;
 
+@property(weak,nonatomic)NSString *game;
+@property(weak,nonatomic)NSString *player;
+
 - (IBAction)onCancelTapped:(id)sender;
 - (IBAction)onDoneTapped:(id)sender;
-
-
 @end

@@ -117,6 +117,15 @@
         UINavigationController *navigationController = segue.destinationViewController;
         PlayerDetailsViewController *playerDetailsViewController = [navigationController viewControllers][0];
         playerDetailsViewController.delegate = self;
+    }else if ([segue.identifier isEqualToString:@"EditPlayer"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        PlayerDetailsViewController *playerDetailsViewController =
+        [navigationController viewControllers][0];
+        playerDetailsViewController.delegate =self;
+//    navigationController.navigationItem.title =@"Edit Player";
+        playerDetailsViewController.navigationItem.title=@"Edit Player";
+        playerDetailsViewController.navigationItem.rightBarButtonItem.title= @"Modificar";
+        
     }
 }
 

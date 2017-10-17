@@ -23,6 +23,10 @@ NSString *_game; //mejor hacer property's
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.detailLabel.text = _game;
+    if(self.game && self.player){
+
+        
+    }
 }
 
 #pragma mark - GamePickerViewControllerDelegate
@@ -52,13 +56,11 @@ NSString *_game; //mejor hacer property's
     }
 }
 
-
 #pragma mark - Navigation items events
 
 - (IBAction)onCancelTapped:(id)sender {
     if(self.delegate &&[self.delegate respondsToSelector:@selector(playerDetailsViewControllerDidCancel:)]){
        [self.delegate playerDetailsViewControllerDidCancel:self];
-        
     }
 }
 - (IBAction)onDoneTapped:(id)sender {
