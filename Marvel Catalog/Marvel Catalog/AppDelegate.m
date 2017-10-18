@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SuperHeroesListViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+        /* Se apunta como raiz del View controller a SuperHeroesListViewController */
+    
+    SuperHeroesListViewController *vc = [[SuperHeroesListViewController alloc] init]; //se creo el viewController
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = self.navigationController; //se asigna el viewController de vc en la raiz
+    
     return YES;
 }
 

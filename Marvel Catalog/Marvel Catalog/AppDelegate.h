@@ -12,8 +12,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+
+//crear propiedad del navigationController
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 - (void)saveContext;
 
